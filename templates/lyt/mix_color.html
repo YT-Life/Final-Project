@@ -1,0 +1,66 @@
+{%extends 'base.html'%} 
+{%load static%}
+
+{%block head%}
+    <link rel="stylesheet" href="/static/css/lyt/lyt_mix_color_html.css">
+{%endblock%}
+
+{%block title%}
+    Final Project
+{%endblock%}
+
+{%block content%}
+    <div class="container px-4 px-lg-5 h-50 my-3 align-items-center justify-content-center text-center">
+        <img src="{{ img.getpic }}" class="img-thumbnail img-fluid">
+    </div>
+
+    <!-- 선택한 컬러 보여주기 -->
+    <p class="myfont">내가 선택한 색깔😎</p>
+    <div class="container px-4 px-lg-5 h-50 my-3 align-items-center justify-content-center text-center">
+        {% for c in color_list %}
+            <label style="background-color: {{ c }}" class="choice_c"></label>
+        {% endfor %}
+    </div>
+
+    <div class="text-center myfont">
+        <a href="{% url 'lyt:upload' %}"><button>다른 색 선택하기</button></a>
+    </div> 
+
+    <!-- 톤온톤 -->
+    <p class="myfont mt-3">
+        내가 선택한 색깔들의 톤온톤😎 <br>
+        ❗톤온톤 : 채도는 다르게 하되, 비슷한 색상을 가짐
+    </p>
+    <div class="container px-4 px-lg-5 h-50 my-3 align-items-center justify-content-center text-center"> 
+        {% for c_list, tot_list in tot_content %}
+            <label style="background-color: {{ c_list }}" class="choice_c"></label>&emsp;&emsp;
+            {% for tots in tot_list %}
+                <label style="background-color: {{ tots }}" class="choice_c"></label>
+            {% endfor %}
+            <br>
+        {% endfor %}
+    </div>
+
+    <!-- 톤인톤 -->
+    <p class="myfont">
+        내가 선택한 색깔들의 톤인톤😎<br>
+        ❗톤인톤 : 색상은 다르게 하되, 비슷한 채도를 가짐
+    </p>
+    <div class="container px-4 px-lg-5 h-50 my-3 align-items-center justify-content-center text-center">
+        {% for c_list, tit_list in tit_content %}
+            <label style="background-color: {{ c_list }}" class="choice_c"></label>&emsp;&emsp;
+            {% for tits in tit_list %}
+                <label style="background-color: {{ tits }}" class="choice_c"></label>
+            {% endfor %}
+            <br>
+        {% endfor %}
+    </div>
+    
+    <!-- 색조합 보여주기 -->
+    <p class="myfont mt-4">👇 내가 선택한 색깔들의 색조합 👇</p>
+    <div class="container px-4 px-lg-5 h-50 my-3 align-items-center justify-content-center text-center">
+        {% for p in palette_list %}
+            <img src="/static/images/color_palette/group({{p}}).png" class='mb-1 mt-1'>
+        {% endfor %}
+    </div>
+{%endblock%}

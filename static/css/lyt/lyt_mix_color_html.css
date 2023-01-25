@@ -1,0 +1,26 @@
+.img-thumbnail {
+    width: 50rem; 
+    height: 25rem;
+}
+
+.choice_c {
+    width: 2rem; 
+    height: 2rem;
+}
+
+.mb-1 {
+    width: 10%;
+}
+
+@font-face {
+    font-family: 'twayair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100px;
+}
+  
+.myfont {
+    font-family: 'twayair', serif;
+    text-align: center;
+}

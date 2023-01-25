@@ -1,0 +1,35 @@
+.master{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Jua', sans-serif; */
+    /* font-family: 'Black Han Sans', sans-serif; */
+    /* font-family: 'Nanum Gothic', sans-serif; */ 
+    /* font-family: 'East Sea Dokdo', cursive; */
+}
+
+a{
+    text-decoration-line: none;
+    color: black;
+    text-align: center;
+    display: inline-block
+}
+
+a:hover{
+    color: rgb(138, 138, 138);
+}
+
+.col {
+    text-align: center;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+    width: 5%;
+}
+
+body {
+    background:linear-gradient(to bottom, rgb(232, 232, 232, 0.3) 50%, rgb(232, 232, 232) 80%,
+                                rgba(102, 102, 102, 0.3) 100%)
+}
+
+

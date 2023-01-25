@@ -1,0 +1,306 @@
+/* root는 파일업로드 표 크기  */
+#root {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.title {
+  text-align: center;
+}
+
+.contents {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+.contents .upload-box {
+  width: 100%;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contents .upload-box .drag-file {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px dashed #dbdbdb;
+}
+.contents .upload-box .drag-file.highlight {
+  border: 3px dashed red;
+}
+.contents .upload-box .drag-file .image {
+  width: 40px;
+}
+.contents .upload-box .drag-file .message {
+  margin-bottom: 0;
+}
+.contents .upload-box .drag-file .preview {
+  display: none;
+  position: absolute;
+  left: 0;
+  height: 0;
+  width: 100%;
+  height: 100%;
+}
+.contents .upload-box .file-label {
+  margin-top: 30px;
+  background-color: #5b975b;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 65%;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.contents .upload-box .file {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .contents {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .contents .upload-box {
+    width: 100%;
+    box-sizing: border-box;
+    margin-right: 0;
+  }
+  .contents .upload-box .drag-file {
+    height: 150px;
+  }
+  .contents .files {
+    width: 100%;
+    box-sizing: border-box;
+    margin-right: 0;
+    overflow: initial;
+  }
+}
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------- */
+
+
+a {
+  text-decoration-line: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+}
+
+/* 하이퍼링크 위에 커서 올라갔을 때, 색깔 안바뀌게!*/
+a:hover {
+  color: white;
+}
+
+
+/* back은 배경사진 추가한 부분 (버리려면 삭제하면됨) */
+.back {
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 100vh;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.533), rgba(219, 217, 217, 0.752)), url("/static/images/sso/painting3.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.extract {
+  margin-top: 30px;
+  background-color: #5b975b;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 65%;
+  border-radius: 6px;
+  cursor: pointer;} 
+
+
+ .best_color_palette {
+  margin-top: 30px;
+  background-color: #5b975b;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 15%;
+  border-radius: 6px;
+  cursor: pointer;
+  margin:auto;
+}
+
+.goback {
+  margin-top: 30px;
+  background-color: #5b975b;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 15%;
+  border-radius: 6px;
+  cursor: pointer;
+  margin:auto;
+  float: left;
+} 
+
+
+ .gonext {
+  margin-top: 30px;
+  background-color: #5b975b;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 15%;
+  border-radius: 6px;
+  cursor: pointer;
+  margin:auto;
+  float: right;
+}
+
+
+.gomain {
+  margin-top: 30px;
+  background-color: #5b975b;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 15%;
+  border-radius: 6px;
+  cursor: pointer;
+  margin:auto;
+  float: right;
+} 
+
+
+.contents .upload-box .file-label {
+  margin-top: 30px;
+  background-color: #5b975b;
+  color: #fff;
+  text-align: center;
+  /* padding: 10px 0; */
+  width: 30%;
+  border-radius: 6px;
+  cursor: pointer;
+  /* float:left;  */
+  /* width: 45%;  */
+  padding:10px;
+}
+
+.contents .upload-box .file-label1 {
+  margin-top: 30px;
+  background-color: #5b975b;
+  color: #fff;
+  text-align: center;
+  /* padding: 10px 0; */
+  /* width: 30%; */
+  border-radius: 6px;
+  cursor: pointer;
+  float:left; 
+  width: 45%; 
+  padding:10px;
+}
+.contents .upload-box .file-label2 {
+  margin-top: 30px;
+  background-color: #5b975b;
+  color: #fff;
+  text-align: center;
+  /* padding: 10px 0; */
+  /* width: 30%; */
+  border-radius: 6px;
+  cursor: pointer;
+  float:right; 
+  width: 45%; 
+  padding:10px;
+}
+
+
+button {
+  margin-top: 30px;
+  background-color: #5b975b;
+  color: #fff;
+  text-align: center;
+  /* padding: 10px 0; */
+  /* width: 30%; */
+  border-radius: 6px;
+  border:none;
+  cursor: pointer;
+  float:right; 
+  width: 45%; 
+  padding:10px;
+}
+
+#loading {
+  margin-top: 30px;
+  background-color: #5b975b;
+  color: #fff;
+  text-align: center;
+  /* padding: 10px 0; */
+  /* width: 30%; */
+  border-radius: 6px;
+  border:none;
+  cursor: pointer;
+  float:right; 
+  width: 45%; 
+  padding:10px;
+}
+
+
+h2 { 
+  font-size: 2.7rem;
+  font-weight: bold;
+  /* font-style:Times; */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.img_style {
+  position: relative;
+  width: 80%;
+  height: 500px;
+  display: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px dashed #dbdbdb;
+}
+
+.back_color_font{
+  font-size: 1.2rem;
+  font-weight: bold;
+  /* font-style:Times; */
+  margin: 0;
+  padding: 0;
+  text-align: left; 
+}
+
+.object_color_font{
+  font-size: 1.2rem;
+  font-weight: bold;
+  /* font-style:Times; */
+  margin: 0;
+  padding: 0;
+  text-align: left; 
+}
+
+.circle{
+ width: 30px;
+ height:30px;
+ border-radius:0;
+ background:scroll;
+ background-color: blue;
+}

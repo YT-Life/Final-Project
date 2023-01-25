@@ -1,0 +1,56 @@
+{%extends 'base.html'%} 
+{%load static%}
+
+{%block head%}
+    <link rel="stylesheet" href="/static/css/lyt/lyt_index_html.css">
+{%endblock%}
+
+{%block title%}
+    Final Project
+{%endblock%}
+
+{%block content%}
+    <!-- 사진 자동 슬라이드 -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2500">
+                <img src="/static/images/lyt/1-2.jpg" class="d-block w-80" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+                <img src="/static/images/lyt/2.jpg" class="d-block w-80" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+                <img src="/static/images/lyt/3.jpg" class="d-block w-80" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+                <img src="/static/images/lyt/4.jpg" class="d-block w-80" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+                <img src="/static/images/lyt/5.jpg" class="d-block w-80" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container mt-4 mb-5 px-5"> <!--col-lg-4 mt-5 mb-4-->
+        <div class="row gx-5">
+            <div class="col-md-12 order-lg-1 mb-5 mb-lg-0 text-center">
+                <h3 class="myfont">
+                    당신만의 스타일로<br>
+                    당신만의 방을 꾸며보세요
+                </h3>
+                <a href="{% url 'lyt:img_upload' %}">
+                    <button class="btn_2 mt-4">색 추천받기</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+{%endblock%}

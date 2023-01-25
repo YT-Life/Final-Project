@@ -1,0 +1,115 @@
+.btn {
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  padding: 1rem 1.75rem;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  border: 0;
+}
+
+.btn-primary {
+  /* 폰트 컬러 */
+  color: #fff;  
+  /* 버튼 색상 */
+  background: linear-gradient(to top, #ff5f6d 0%, #ffc371 100%);
+  border-color: #ffffff;
+}
+.btn-primary:hover {
+  color: var(--bs-gray-700);
+  background: linear-gradient(to top, #e25763 0%, #e6b066 100%);
+}
+
+.btn-check:focus + .btn-primary, .btn-primary:focus {
+  color: var(--bs-gray-700);
+  background: linear-gradient(to top, #e25763 0%, #e6b066 100%);
+  box-shadow: 0 0 0 0.25rem rgba(123, 175, 172, 0.5);
+}
+.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+  color: var(--bs-gray-700);
+  background: linear-gradient(to top, #cf4f5a 0%, #d1a05c 100%);
+}
+.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  color: var(--bs-gray-700);
+  box-shadow: 0 0 0 0.25rem rgba(123, 175, 172, 0.5);
+}
+.btn-primary:disabled, .btn-primary.disabled {
+  color: #fff;
+  background-color: #64a19d;
+  border-color: #64a19d;
+}
+
+.masthead {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.9) 80%, #fff 100%), url("/static/images/jun/bg-colorful.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+.masthead h1, .masthead .h1 {
+  font-family: 'Black Han Sans', sans-serif;
+  /* font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.8rem;
+  background: linear-gradient(var(--bs-gray-900), var(--bs-gray-600));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.masthead h2, .masthead .h2 {
+  max-width: 20rem;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .masthead h1, .masthead .h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .masthead {
+    height: 100vh;
+    padding: 0;
+  }
+  .masthead h1, .masthead .h1 {
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+    letter-spacing: 0.8rem;
+  }
+  .masthead h2, .masthead .h2 {
+    max-width: 30rem;
+    font-size: 1.25rem;
+  }
+}
+
+
+.upload-section {
+  /* section의 높이 설정 */
+  min-height: 45rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: linear-gradient(to bottom, #fff 0%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0.8) 100%);
+}
+.upload-section h2 {
+  font-family: 'Black Han Sans', sans-serif;
+}
+.upload-section p {
+  font-family: 'Jua', sans-serif;
+  font-size: 18px;
+  margin-bottom: 2rem;
+}
+
+#extract_btn {
+  font-family: 'Jua', sans-serif;
+}
+
+#preview {
+  width: 60%
+}
+

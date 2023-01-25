@@ -1,0 +1,84 @@
+{%extends 'base.html'%} 
+{%load static%}
+
+{%block head%}
+    {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"> {% endcomment %}
+
+    <link rel="stylesheet" href = "/static/css/main_html.css">
+    {% comment %} <script type="text/javascript" src="/static/js/main_html.js"></script> {% endcomment %}
+{%endblock%}
+
+{%block title%}
+    color recommendation
+{%endblock%}
+
+{%block content%}
+<div class="mt-5">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10">
+                <img src="/static/images/palette_1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="/static/images/palette_2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="/static/images/palette_3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="/static/images/palette_4.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="/static/images/palette_5.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div> 
+
+
+<div class="container my-5">
+    <div class="row pt-2">
+        <div class="col">
+            <a href = '{% url "jun:main" %}'>                
+                <i class="fa-solid fa-user fa-5x"></i><br>
+                <b><p class = 'master'>JunJeong</p></b>
+            </a>
+        </div>
+        <div class="col">
+            <a href = '{% url "ksm:index" %}'>                
+                <i class="fa-solid fa-user fa-5x"></i><br>
+                <b><p class = 'master'>SangMin</p></b>
+            </a>
+        </div>
+        <div class="col">
+            <a href = '{% url "sso:mainpage" %}'>                
+                <i class="fa-solid fa-user fa-5x"></i><br>
+                <b><p class = 'master'>SoYoung</p></b>
+            </a>
+        </div>
+        <div class="col">
+            <a href = '{% url "lyt:index" %}'>                
+                <i class="fa-solid fa-user fa-5x"></i><br>
+                <b><p class = 'master'>YongTaek</p></b>
+            </a>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

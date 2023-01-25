@@ -1,0 +1,148 @@
+/* form태그 하위태그 css */
+#root {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 800px;
+}
+  
+.title {
+  text-align: center;
+}
+  
+.contents {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+.contents .upload-box {
+  width: 100%;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  
+.drag-file {
+  position: relative;
+  width: 90%;
+  height: 33.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px dashed #fcfc45;
+}
+
+.highlight {
+  border: 5px dashed rgb(0, 0, 0);
+}
+
+.contents .upload-box .drag-file .image {
+   width: 25%;
+}
+
+.message {
+  width: 20rem;
+}
+
+.contents .upload-box .drag-file .preview {
+  display: none;
+  position: absolute;
+  left: 0;
+  height: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* .file-label {
+  margin-top: 10px;
+  background-color: #2b2b2b;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  width: 15rem;
+  border-radius: 20px;
+  cursor: pointer;
+} */
+
+.file-label {
+  margin-top: 10px;
+  background-color: #2b2b2b;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  width: 250px;
+  border-radius: 20px;
+  /* 버튼 눌렀을 때 효과 */
+  transition-duration: 0.2s;
+  box-shadow : 8px 8px 8px black;
+}
+
+.file-label:active {
+  margin-left:10px;
+  margin-top:10px;
+  box-shadow:none;
+}
+
+.button_2 {
+  margin-top: 10px;
+  background-color: #2b2b2b;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  width: 200px;
+  border-radius: 20px;
+  /* 버튼 눌렀을 때 효과 */
+  transition-duration: 0.2s;
+  box-shadow : 8px 8px 8px black;
+}
+
+.button_2:active {
+  margin-left:10px;
+  margin-top:10px;
+  box-shadow:none;
+}
+
+.loading {
+  margin-top: 10px;
+  background-color: #2b2b2b;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  width: 200px;
+  border-radius: 20px;
+}
+
+.contents .upload-box .file {
+  display: none;
+}
+
+/* 배경 이미지 css */
+.masthead {
+  padding-top: 0.4rem;
+  height: 56.85rem;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background-image: linear-gradient(
+      rgba(249, 242, 242, 0.8),
+      rgba(246, 94, 94, 0.8)
+    ), url("/static/images/lyt/header-bg.jpg");
+  /* background-image: url("/static/images/lyt/header-bg.jpg"); */
+  background-size: cover;
+}
+
+@font-face {
+  font-family: 'twayair';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-size: 100px;
+}
+
+.myfont {
+  font-family: 'twayair', serif;
+  text-align: center;
+}

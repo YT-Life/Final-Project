@@ -1,0 +1,123 @@
+{%extends 'base.html'%} 
+{%load static%}
+
+{%block head%}
+    <link rel="stylesheet" href="/static/css/lyt/lyt_upload_html.css">
+{%endblock%}
+
+{%block title%}
+    Final Project
+{%endblock%}
+
+{%block content%}
+    <div class="loading"></div>
+    <div class="image text-center mt-5">
+        <img src="{{ img.getpic }}" class="img-thumbnail img-fluid" width="500rem" height="450rem">
+    </div>
+
+    <div class="text-center myfont mt-3">
+        자신이 맘에드는 배경색과 객체색을 선택해서 색조합을 받아보세요.<br>
+        💥 5개까지만 선택가능합니다.
+    </div>
+
+    <form name="form1" id="id1" method="post" style="margin: 0;" action="{% url 'lyt:mix_color' %}">
+        {% csrf_token %}
+        <div class="container">
+            <!-- 배경색 -->
+            <div class="text-center mt-4 myfont">
+                <h4>배경색 선택</h4>
+            </div>
+            <div class="text-center colorpalette">
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check" type="checkbox" name="choice" value="{{ bg_color_1 }}">
+                <label style="background-color: {{ bg_color_1 }};" class="btn" for="btn-check"></label>
+
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check2" type="checkbox" name="choice" value="{{ bg_color_2 }}">
+                <label style="background-color: {{ bg_color_2 }};" class="btn" for="btn-check2"></label>
+                
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check3" type="checkbox" name="choice" value="{{ bg_color_3 }}">
+                <label style="background-color: {{ bg_color_3 }};" class="btn" for="btn-check3"></label>
+                
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check4" type="checkbox" name="choice" value="{{ bg_color_4 }}">
+                <label style="background-color: {{ bg_color_4 }};" class="btn" for="btn-check4"></label>
+                
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check5" type="checkbox" name="choice" value="{{ bg_color_5 }}">
+                <label style="background-color: {{ bg_color_5 }};" class="btn" for="btn-check5"></label>
+            </div>
+
+            <!-- 객체색 -->
+            <div class="text-center mt-5 myfont">
+                <h4>객체색 선택</h4>
+            </div>
+            <div class="text-center colorpalette">
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check6" type="checkbox" name="choice" value="{{ ob_color_1 }}">
+                <label style="background-color: {{ ob_color_1 }};" class="btn" for="btn-check6"></label>
+
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check7" type="checkbox" name="choice" value="{{ ob_color_2 }}">
+                <label style="background-color: {{ ob_color_2 }};" class="btn" for="btn-check7"></label>
+                
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check8" type="checkbox" name="choice" value="{{ ob_color_3 }}">
+                <label style="background-color: {{ ob_color_3 }};" class="btn" for="btn-check8"></label>
+                
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check9" type="checkbox" name="choice" value="{{ ob_color_4 }}">
+                <label style="background-color: {{ ob_color_4 }};" class="btn" for="btn-check9"></label>
+                
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check10" type="checkbox" name="choice" value="{{ ob_color_5 }}">
+                <label style="background-color: {{ ob_color_5 }};" class="btn" for="btn-check10"></label>
+
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check11" type="checkbox" name="choice" value="{{ ob_color_6 }}">
+                <label style="background-color: {{ ob_color_6 }};" class="btn" for="btn-check11"></label>
+
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check12" type="checkbox" name="choice" value="{{ ob_color_7 }}">
+                <label style="background-color: {{ ob_color_7 }};" class="btn" for="btn-check12"></label>
+                
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check13" type="checkbox" name="choice" value="{{ ob_color_8 }}">
+                <label style="background-color: {{ ob_color_8 }};" class="btn" for="btn-check13"></label>
+                
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check14" type="checkbox" name="choice" value="{{ ob_color_9 }}">
+                <label style="background-color: {{ ob_color_9 }};" class="btn" for="btn-check14"></label>
+                
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check15" type="checkbox" name="choice" value="{{ ob_color_10 }}">
+                <label style="background-color: {{ ob_color_10 }};" class="btn" for="btn-check15"></label>
+                <br>
+
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check16" type="checkbox" name="choice" value="{{ ob_color_11 }}">
+                <label style="background-color: {{ ob_color_11 }};" class="btn" for="btn-check16"></label>
+
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check17" type="checkbox" name="choice" value="{{ ob_color_12 }}">
+                <label style="background-color: {{ ob_color_12 }};" class="btn" for="btn-check17"></label>
+                
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check18" type="checkbox" name="choice" value="{{ ob_color_13 }}">
+                <label style="background-color: {{ ob_color_13 }};" class="btn" for="btn-check18"></label>
+                
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check19" type="checkbox" name="choice" value="{{ ob_color_14 }}">
+                <label style="background-color: {{ ob_color_14 }};" class="btn" for="btn-check19"></label>
+                
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check20" type="checkbox" name="choice" value="{{ ob_color_15 }}">
+                <label style="background-color: {{ ob_color_15 }};" class="btn" for="btn-check20"></label>
+
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check21" type="checkbox" name="choice" value="{{ ob_color_16 }}">
+                <label style="background-color: {{ ob_color_16 }};" class="btn" for="btn-check21"></label>
+
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check22" type="checkbox" name="choice" value="{{ ob_color_17 }}">
+                <label style="background-color: {{ ob_color_17 }};" class="btn" for="btn-check22"></label>
+                
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check23" type="checkbox" name="choice" value="{{ ob_color_18 }}">
+                <label style="background-color: {{ ob_color_18 }};" class="btn" for="btn-check23"></label>
+                
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check24" type="checkbox" name="choice" value="{{ ob_color_19 }}">
+                <label style="background-color: {{ ob_color_19 }};" class="btn" for="btn-check24"></label>
+                
+                <input onclick="CountChecked(this)" class="btn-check" id="btn-check25" type="checkbox" name="choice" value="{{ ob_color_20 }}">
+                <label style="background-color: {{ ob_color_20 }};" class="btn" for="btn-check25"></label>
+            </div>
+
+            <div class="text-center mt-5 myfont">
+                <button type="button" onclick='location.href="/lyt/img_upload/"'>재업로드</button>
+                <button>조합보기</button>
+            </div>  
+        </div>
+    </form>
+    
+    <script src="/static/js/lyt/lyt_upload_html.js"></script>
+{%endblock%}
+

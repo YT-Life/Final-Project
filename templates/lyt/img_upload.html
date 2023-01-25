@@ -1,0 +1,48 @@
+{%extends 'base.html'%} 
+{%load static%}
+
+{%block head%}
+    <link rel="stylesheet" href="/static/css/lyt/lyt_imgupload_html.css">
+{%endblock%}
+
+{%block title%}
+    Final Project
+{%endblock%}
+
+{%block content%}
+    <header class="masthead">
+        <div class="container">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div id="root">
+                    <div class="contents">
+                        <div class="upload-box">
+                            <h2 class="title">
+                                <label class="file-label my_font" for="chooseFile">
+                                    <b>FILE UPLOAD!</b>
+                                </label>
+                            </h2>
+                            <div id="drop-file" class="drag-file mt-5">
+                                <img src="https://img.icons8.com/pastel-glyph/2x/image-file.png" alt="파일 아이콘" class="image" >
+                                <p class="message" ><b>Drag files to upload</b></p>
+                                <img src="" alt="미리보기 이미지" class="preview">
+                            </div>
+                            
+                            <!-- <label ><b>Choose File</b></label> -->
+                            <input class="file" id="chooseFile" name="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)" accept="image/png, image/jpeg, image/gif">
+                            <button class="button_2 mt-5" id="loadingBtn"><b>COLOR EXTRACTION</b></button>
+                            
+                            <div class="loading mt-5" id="loading" disabled>
+                                <span class="spinner-border spinner-border-sm text-warning"></span>
+                                Loading...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>   
+    </header>
+
+    <script src="/static/js/lyt/loading.js"></script>
+    <script src="/static/js/lyt/lyt_imgupload_html.js"></script>
+{%endblock%}

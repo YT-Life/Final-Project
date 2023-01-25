@@ -1,0 +1,63 @@
+{%extends 'base.html'%} 
+{%load static%}
+
+{%block head%}
+    <link rel="stylesheet" href = "/static/css/ksm/recommend.css">
+{%endblock%}
+
+{%block title%}
+    color recommendation
+{%endblock%}
+
+{%block content%}
+    <div class="container">    
+        <div class="text-center mt-4">
+            <img src="{{ image.getpic }}" width="300rem" height="200rem">
+        </div>
+     <!-- 선택한 컬러 보여주기 -->
+    </div>
+    <div class="container"> 
+        <div class="colorpalette" style="padding-top:10px; text-align: center;">
+            <p class = 'back_color_font mt-3 my_font'> 내가 선택한 색 </p>
+            {%for color in color_list%}
+            <input class="btn-check" id="btn-check1" type="checkbox" name="choice" value="{{ color }}">
+            <label style="background-color: {{ color }}; width: 2rem; height: 2rem;" for="btn-check1"></label>
+            {% endfor%}
+        </div>
+    </div>    
+    <div class="container"> 
+        <div class="colorpalette" style="padding-top:10px; text-align: center;">
+            <p class = 'back_color_font mt-3 my_font'>  tone-on-tone 색 </p>
+            {%for tons in tone_on_tone_list%}
+                {%for ton in tons%}
+                <input class="btn-check" id="btn-check2" type="checkbox" name="choice" value="{{ color }}">
+                <label style="background-color: {{  ton }}; width: 2rem; height: 2rem;" for="btn-check2"></label>
+                {% endfor %}
+            {% endfor%}
+        </div>
+    </div>    
+    <div class="container"> 
+        <div class="colorpalette" style="padding-top:10px; text-align: center;">
+            <p class = 'back_color_font mt-3 my_font'> tone-in-tone 색 </p>
+            {%for tins in tone_in_tone_list%}
+                {%for tit in tins%}
+                <input class="btn-check" id="btn-check3" type="checkbox" name="choice" value="{{ color }}">
+                <label style="background-color: {{ tit }}; width: 2rem; height: 2rem;" for="btn-check3"></label>
+                {% endfor %}
+            {% endfor%}
+        </div>
+    </div>    
+    <div class="container">
+        <div class="container px-4 px-lg-5 h-50 my-4 align-items-center justify-content-center text-center">
+            <p class = 'back_color_font mt-3 my_font'> 추천 색 조합 </p>
+            <!-- {{palette_list}} -->
+            {% for p in palette_list %}
+                <img src="/static/images/color_palette/group({{p}}).png" class='mb-1' style='width:10%'></img>
+            {% endfor %}
+        </div>
+    </div>  
+    <div class="container mb-5 mt-5" >
+        <button class="myButton" href="#" onclick="location.href='color_extract'" type="button">색 선택 다시하기</button>
+        <button class="myButton" href="#" onclick="location.href='img_upload '" type="button">업로드 다시하기</button>
+    </div>
+{%endblock%}

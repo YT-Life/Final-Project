@@ -1,0 +1,33 @@
+.img-thumbnail {
+  width: 50rem;
+  height: 27rem;
+}
+
+.btn {
+  border: 3px solid transparent;
+  margin-top:3px; 
+  width: 2rem; 
+  height: 2rem;
+}
+
+.btn-check:focus + .btn, .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(100, 161, 157, 0.25);
+}
+
+.btn-check:checked + .btn, .btn:checked {
+  outline: 0;
+  border: 3px solid red;
+}
+
+@font-face {
+  font-family: 'twayair';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-size: 100px;
+}
+
+.myfont {
+  font-family: 'twayair', serif;
+}

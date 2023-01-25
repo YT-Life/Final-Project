@@ -1,0 +1,106 @@
+.color_extract_section h3{
+    font-family : 'Jua', sans-serif;
+    text-align: center;
+}
+
+.btn {
+    /* inline: 전후 줄바꿈 없음 / block: margin과 padding 지정 */
+    /* inline-block: 내부 block, 외부 inline */
+    display: inline-block;
+    /* 폰트 굵기 */
+    font-weight: 400;   
+    /* 줄 높이 */
+    line-height: 1.5;
+    /* inline-level의 요소들을 중앙 정렬 */
+    text-align: center;
+    /* 밑줄 */
+    text-decoration: none;
+    /* 수직 정렬 */
+    vertical-align: middle;
+    /* hover할 경우 보일 포인터의 종류 */
+    cursor: pointer;
+    /* 사용자가 더블클릭으로 선택했을 경우 */
+    -webkit-user-select: none;  /* safari */
+       -moz-user-select: none;  /* mozzila */
+        -ms-user-select: none;  /* IE */
+            user-select: none; 
+    /* 요소의 배경색 */
+    background-color: transparent;
+    /* 요소의 테두리 */
+    border: 1px solid transparent;
+    /* 패딩 (y축, x축) / (상, 우, 하, 좌) */ 
+    padding: 0.375rem 0.75rem;
+    /* rem : html태그의 폰트 크기 기준의 상대적 크기 */
+    /* em : 현재 폰트 크기 기준의 상대적 크기*/
+    font-size: 1rem;
+    /* 둥근 테두리 */
+    border-radius: 0.25rem;
+    /* 색상 변화를 부드럽게 */
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+/* @media <media-query-list> {<stylesheet>} */
+/* prefers-reduced-motion : 사용자 설정이 축소 동작으로 설정된 경우 적용할 스타일 */
+@media (prefers-reduced-motion: reduce) {
+.btn {
+    transition: none;
+}}
+
+/*  */
+.btn-check:focus + .btn, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(51, 144, 255, 0.4);
+    }
+.btn-check:checked + .btn, .btn:checked {
+outline: 0;
+border: 3px solid rgb(51, 144, 255);
+}
+
+.btn-primary {
+/* 폰트 컬러 */
+color: #fff;  
+/* 버튼 색상 */
+background: linear-gradient(to top, #ff5f6d 0%, #ffc371 100%);
+border-color: #ffffff;
+font-family: 'Jua', sans-serif;
+font-size: 20px;
+}
+.btn-primary:hover {
+color: var(--bs-gray-700);
+border-color: transparent;
+background: linear-gradient(to top, #e25763 0%, #e6b066 100%);
+}
+.btn-check:focus + .btn-primary, .btn-primary:focus {
+color: var(--bs-gray-700);
+background: linear-gradient(to top, #e25763 0%, #e6b066 100%);
+}
+.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+color: var(--bs-gray-700);
+background: linear-gradient(to top, #cf4f5a 0%, #d1a05c 100%);
+}
+.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+color: var(--bs-gray-700);
+box-shadow: 0 0 0 0.25rem rgba(123, 175, 172, 0.5);
+}
+
+  
+body {
+    /* position: relative; */
+    padding: 0;
+    width: auto;
+    height: auto;
+    min-height: 35rem;
+    /* background : url("/static/images/jun/bg-gradient.jpg"); */
+    background: linear-gradient(90deg, 
+                                rgba(255, 255, 255, 0) 0%,
+                                rgba(255, 255, 255, 0.6) 20%, 
+                                rgba(255, 255, 255, 1) 50%, 
+                                rgba(255, 255, 255, 0.6) 80%, 
+                                rgba(255, 255, 255, 0) 100%), 
+                                url("/static/images/jun/bg-gradient.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+

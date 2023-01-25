@@ -1,0 +1,103 @@
+{%extends 'base.html'%} 
+{%load static%}
+
+{%block head%}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<link rel="icon" type="image/x-icon" href="/static/images/ksm/favicon.ico" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+<link href="/static/css/ksm/index.css" rel="stylesheet" />
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+<script src="/static/js/ksm/index.js"></script>
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> -->
+{%endblock%}
+
+{%block title%}
+    <title>KKang's 메인</title>
+{%endblock%}
+
+{%block content%}
+
+<header class="masthead md-5" >
+    <div class="container px-4 px-lg-5 h-100">
+        <div class="row gx-3 gx-lg-4 h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-10 align-self-end">
+                <h1 class="text-white my_font">당신의 집 인테리어에 맞는 색 조합을<br> 추천해 드립니다</h1>
+                <hr class="divider" />
+            </div>
+            <div class="col-lg-8 align-self-baseline">
+                <p class="text-white-75 mb-5 my_font"></p>
+                <a class="btn btn-primary btn-xl rounded-pill" href="#scroll">더 알아보기</a>
+                <a class="btn btn-primary btn-xl rounded-pill" href="{%url 'ksm:img_upload'%}">이미지 업로드</a>
+            </div>
+        </div>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+</header>
+
+<section id="scroll">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5"><img class="img-fluid rounded-circle" src="/static/images/ksm/index_circle_1_1.jpeg" alt="..." /></div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h3 class="display-5 my_font">인테리어 색 조합으로 <br>고통 받고 계신가요?</h3>
+                    <!-- <p class="my_font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Content section 2-->
+<section>
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="p-5"><img class="img-fluid rounded-circle" src="/static/images/ksm/index_circle_2_1.png" alt="..." /></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-5">
+                    <h2 class="display-5 my_font">저희가 당신이 갖고 있는 <br>가구의 색과 집의 분위기로 어울리는 색 조합을 추천해<br> 드립니다.</h2>
+                    <!-- <p class="my_font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Content section 3-->
+<section>
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5"><img class="img-fluid rounded-circle" src="/static/images/ksm/index_circle_3_1.jpg" alt="..." /></div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4 my_font">더 이상 혼자서 어울리지 않는 인테리어 색 조합으로 고통 받지 마세요!</h2>
+                    <!-- <p class="my_font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
+<div class="container px-4 px-lg-5 mb-5">
+    <div class="row gx-3 gx-lg-4 h-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-8 align-self-baseline">
+            <p class="text-white-75 mb-5 my_font"></p>
+            <a class="btn btn-primary btn-xl rounded-pill" href="{%url 'ksm:img_upload'%}">이미지 업로드</a>
+        </div>
+    </div>
+</div>
+{%endblock%}
+

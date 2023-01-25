@@ -1,0 +1,73 @@
+{%extends 'base.html'%} 
+{%load static%}
+{%block head%}  
+    <link rel="stylesheet" href = "/static/css/sso/sso_extract_color_html.css">
+{%endblock%}
+
+
+<!-- 페이지 이름 적는 부분  -->
+{%block title%} 
+    best_color_palette 
+{%endblock%}     
+
+
+{%block content%} 
+<!-- 각자 페이지 body 부분 -->
+<!-- 배경사진 추가 : back 클래스는 배경넣은 부분이라서 빼도 됨! -->
+<!-- my-auto y축 위아래 / mx-auto 양옆 x축 / 마진(공간)을 자동으로 잡는다 / ex: 표와 표 사이의 공간을 띄울때 사용  -->
+<!-- padding 한 영역의 안쪽 여백 설정해주는 것, px / py 로 사용  -->
+<div class = "back my-auto">
+    <style img src="/static/images/sso/painting3.jpg"></style>
+ <!--  여기부터 원본 -->
+    <div id="root">
+        <h2 class="title">Best Color Palette For You :)</h2>
+        <hr>
+        <div class="contents">           
+            <br><br> <br><br> <br><br> <br><br>
+           
+            <div class="text-center">
+                <img class="img_style" src="{{ image.getpic }}">
+                <br><br>  
+
+                    <!-- 선택한 컬러 보여주기 -->
+                    <p class = 'back_color_font'> ● The Color You Choose  </p>
+                    <div class="colorpalette" style="padding-top:10px; text-align: center;">
+                        {%for i in color_list%}
+                            <div class = "combination_1">
+                                <label style="background-color: {{ i }}" class="btn" ></label>
+                            </div>    
+                        {% endfor%}
+                    </div>
+                    <br><br><br>
+
+                    <!-- 객체 색깔로 색 조합 추천하기 -->    
+                    <p class = 'back_color_font'> ● Recommend Color Combination </p>
+                    <div>
+                        <div class="container px-4 px-lg-10 h-50 my-4 align-items-center justify-content-center text-center">
+                            {% for p in palette_list %}
+                                <img src="/static/images/color_palette/group({{p}}).png" class='mb-1' style='width:10%'></img>
+                            {% endfor %}
+                        </div>  
+                    </div>
+                    <br>
+            
+                <div class = "goback">
+                    <label class="file-label"><a href = "{% url 'sso:extract_color' %}"> Go Back</a></label>
+                </div>
+
+                <div class = "gomain">
+                    <label class="file-label"><a href = "{% url 'sso:mainpage' %}"> Main</a></label>
+                </div>
+            </div>   
+        </div>
+
+</div>        
+{%endblock%}
+
+
+
+
+{%block js%}
+    <!-- 페이지에 필요한 js코드 불러오는 부분 -->
+    <script src="/static/js/sso/sso_extract_color.html.js"></script>
+{%endblock%}      

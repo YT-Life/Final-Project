@@ -1,0 +1,61 @@
+{%extends 'base.html'%} 
+{%load static%}
+{%block head%}  
+    <link rel="stylesheet" href = "/static/css/sso/sso_upload_html.css"> 
+    
+{%endblock%}
+
+<!-- 페이지 이름 적는 부분  -->
+{%block title%}
+    image_upload_page 
+{%endblock%}     
+
+
+{%block content%}
+<!-- 각자 페이지의 body부분  -->
+<!-- back 클래스는 배경넣은 부분이라서 빼도 됨! -->
+<div class = "back">
+    <style <img src="/static/images/sso/painting3.jpg"></style>
+<!--  여기부터 원본 -->
+    <div id="root">
+        <h2 class="title">File Upload</h2>
+        <hr>
+        <p align="center"> Please take a photo of the place you would like to receive a color recommendation for. 
+        <br>And select one photo and upload it as an image file.
+        <br>The higher the resolution and clearer the photo, the better it is for extracting colors.</p>
+        <div class="contents">
+            <div class="upload-box">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}     
+                    <div id="drop-file" class="drag-file">
+                        <img src="https://img.icons8.com/pastel-glyph/2x/image-file.png" alt="파일 아이콘" class="image" >
+                        <p class="message">Drag files to upload</p>
+                        <img src="" alt="미리보기 이미지" class="preview">
+                    </div>
+
+                    <div style = "width: 40rem;">
+                        <label class="file-label1" for="chooseFile">Choose File</label>
+                           
+                        <input class="file" name = "chooseFile" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)" accept="image/png, image/jpeg, image/gif">
+                        <!-- <label class="file-label2"><a href = "{% url 'sso:extract_color' %}">Extract Color</a></label> -->
+                        <button type="submit"  id= "loadingbtn">Extract Color</button>
+                        <div id="loading" disabled>
+                            <span class="spinner-border spinner-border-sm text-warning" role="status" aria-hidden="true"></span>
+                            Loading...
+                        </div>
+                    </div>
+                </form>         
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}
+
+
+{%block js%}
+    <!-- 페이지에 필요한 js코드 불러오는 부분 -->
+    <script src = "/static/js/sso/sso_upload_html.js"></script>
+    <script src="/static/js/sso/loading_html.js"></script>
+    
+{%endblock%}        
+

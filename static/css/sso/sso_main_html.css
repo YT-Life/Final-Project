@@ -1,0 +1,88 @@
+.masthead {
+    min-height: 30rem;
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100vh;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("/static/images/sso/painting3.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+  .masthead h1, .masthead .h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  @media (min-width: 992px) {
+    .masthead {
+      height: 100vh;
+    }
+    .masthead h1, .masthead .h1 {
+      font-size: 5.5rem;
+      text-align: center;
+    }
+  }
+
+  .sso_mb-5 {
+    font-size: 2rem;  
+  }
+
+
+.mb-1 {
+    margin-bottom: 0.25rem !important;
+}
+
+.px-4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+}
+
+
+.text-center {
+    text-align: center !important;
+}
+
+
+em {
+    font-style: italic;
+}
+
+
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+
+.align-items-center {
+    align-items: center !important;
+}
+
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    /* color: #212529; */
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    /* -webkit-user-select: none; */
+    /* -moz-user-select: none; */
+    /* -ms-user-select: none; */
+    user-select: none;
+    /* background-color: transparent; */
+    border: 1px solid transparent;
+    /* padding: 0.375rem 0.75rem; */
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
